@@ -1,1 +1,27 @@
+.topnav{
+    overflow:hidden;
+    background-color: azure;
+}
+.topnav a {
+    float: right;
+    display: block;
+    color: black; 
+    text-align: center;
+    text-decoration: none;
 
+}
+.topnav a:hover {
+    background-color: cornflowerblue;
+    color: black;
+}
+.header {
+    background-color: azure;
+    text-align: left;
+    padding: 20px;
+}
+#logo {
+    float: left;
+    height: 50px;
+    margin-right: 10px;
+  }
+  
