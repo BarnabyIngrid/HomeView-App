@@ -1,21 +1,21 @@
-.topnav{
+.mainNav{
     overflow:hidden;
-    background-color: azure;
+    background-color: white;
 }
-.topnav a {
+.mainNav a {
     float: right;
     display: block;
     color: black; 
-    text-align: center;
+    text-align: right;
     text-decoration: none;
 
 }
-.topnav a:hover {
+.mainnav a:hover {
     background-color: cornflowerblue;
     color: black;
 }
-.header {
-    background-color: azure;
+.jumboCopy {
+    background-color: orange;
     text-align: left;
     padding: 20px;
 }
@@ -23,5 +23,18 @@
     float: left;
     height: 50px;
     margin-right: 10px;
+  }
+#mainPic {
+    float: none;
+    
+
+
+}   
+.footerImage {
+    background-image: url('rowofhouses.jpg');
+    background-repeat: repeat;
+    width: 100%;
+    height: 100%;
+    background-position: top left;
   }
   
