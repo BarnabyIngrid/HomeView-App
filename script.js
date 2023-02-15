@@ -103,9 +103,45 @@ $(document).ready(function () {
      let observer = new IntersectionObserver(callback,options);
      observer.observe(listEnd)
     
+// Fade in and out of reviews.
+var dataElements = document.querySelectorAll("#data p");
+
+    function fadeIn() {
+      for (var i = 0; i < dataElements.length; i++) {
+        dataElements[i].classList.remove("fade-out");
+        dataElements[i].classList.add("fade-in");
+      }
+    }
+    
+    function fadeOut() {
+      for (var i = 0; i < dataElements.length; i++) {
+        dataElements[i].classList.remove("fade-in");
+        dataElements[i].classList.add("fade-out");
+      }
+    }
+    function populateData() {
+      var data = ["This has really helped me find an area that I can call home.-Sally A.", 
+      "Looking at the crime stats for each area is an eyeopener!-Ben T.",
+      "Broadband speeds are important to me as I work from home.-Carol G.",
+      "Being in close proximaty to the local schools in the area is key for my family.-Adam M."];
+      var html = "";
+      for (var i = 0; i < data.length; i++) {
+        html += "<p>" + data[i] + "</p>";
+      }
+      document.getElementById("data").innerHTML = html;
+    }
+       // Fade in the elements after a delay
+    setTimeout(fadeIn, 1000);
+    
+    // Fade out the elements after another delay
+    setTimeout(fadeOut, 5000);
+    
+
     const crimeDataJson = '{"type":"Theft","date":"2022-02-10","location": "London"}';
     const crimeData = JSON.parse (crimeDataJson);
     console.log(crimeData.type); //Output: "Theft"
     console.log(crimeData.data); //Output: "2022-02-10"
     console.log(crimeData.location); //Output: "London"
+
+  
     
