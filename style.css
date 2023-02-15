@@ -1,21 +1,22 @@
-.topnav{
+
+.mainNav{
     overflow:hidden;
-    background-color: azure;
+    background-color: white;
 }
-.topnav a {
+.mainNav a {
     float: right;
     display: block;
     color: black; 
-    text-align: center;
+    text-align: right;
     text-decoration: none;
 
 }
-.topnav a:hover {
+.mainNav a:hover {
     background-color: cornflowerblue;
     color: black;
 }
-.header {
-    background-color: azure;
+.jumboCopy {
+    background-color: white;
     text-align: left;
     padding: 20px;
 }
@@ -23,5 +24,47 @@
     float: left;
     height: 50px;
     margin-right: 10px;
+  }
+#mainPic {
+    height: 500px;
+    width: 100%;
+  }
+  #divContent{
+    width: 400px; 
+    display: block; 
+    margin: 0 auto; 
+    border: 2px solid black; 
+    text-align: center; 
+}
+#listEnd { width:400px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5px;
+    margin-bottom:5px;
+    border: 1px; 
+    border-color: black;
+    text-align: center;
+     line-height: 50px
+    }
+
+  #data {
+    opacity: 0.5;
+    transition: opacity 1s;
+  }
+  
+  .fadeIn {
+    opacity: 1;
+  }
+  
+  .fadeOut {
+    opacity: 0;
+  }
+
+#footerImage {
+    background-image: url("images/rowofhouses.jpg");
+    background-repeat: repeat-x;
+    height:  50%;
+    width: 50%;
   }
   

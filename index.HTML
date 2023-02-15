@@ -11,8 +11,14 @@
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link href="vendor/fontawesome-free/css/all.min.css">
   <link rel="stylesheet" href="style.css">
+
   
        <title>HomeView</title>
+
+  <link rel="icon" href="path/to/icon.png">
+  <link rel="apple-touch-icon" href="images/HomeView.ioLogo.jpg">
+      
+
 </head>
 
 <body id="page-top">
@@ -37,7 +43,7 @@
 
   <div class="jumbotron homeviewBackground">
     <div class="jumboCopy" id="jumboCopy">
-      <p class="lead">Welcome to the HomeView.io, by using your postcode you can access key property data for information.  Enter your postcode below to help you decide on the location of your new home...</p>
+      <p class="lead">Welcome to the HomeView.io, by using your postcode you can access key property data for information.  Enter your postcode below to help you decide on the location of your new home.</p>
     </div>
   </div>   
  
@@ -46,7 +52,19 @@
     <div class="container">
       <div class="row">
         <div class="col-md-10 col-lg-8 mx-auto text-center">
+
           <img src="images/Bigrowofhousespic.jpg" id="mainPic">
+
+          <style>
+            body {
+             background-image: url("images/Bigrowofhousespic.jpg");
+             background-position: center;
+             background-size: cover;
+             background-repeat: no-repeat;
+             height: 50%;
+            }
+          </style>
+
           <h2 class="text-black mb-5">Enter property postcode to begin search</h2>
           <form class="form-inline d-flex">
             <input class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0" id="inputPostcode" type="postcode"
@@ -73,20 +91,44 @@
     <div class="card">
       <div class="card-body">
         <h2 class="card-title">Community Feedback</h2>
-          <p class="card-text">Fade in fade out comments to go here</p>
+        <div id="data">
+            <ul>
+              <li>This has really helped me find an area that I can call home.
+                -Sally A.</li>
+              <li>Looking at the crime stats for each area is an eyeopener!
+                -Ben T.</li>
+              <li>Broadband speeds are important to me as I work from home.
+                -Carol G.</li>
+                <li> Being in close proximaty to the local schools in the area is key for my family.
+                  -Adam M.</li>
+            </ul>
+          </div>
+            </p>
+          </div>
           </div>
         </div>
       </div>
     </div>
   </div>
+
    
   <footer>
     <div class="container">
       <img src="images/rowofhouses.jpg" id="footerImage">
       <p>Your Website 2023. All Rights Reserved.</p>
 
-    </div>
-  </footer>
+
+
+  <div id='divContent'>
+
+
+  </div>
+  <div id='listEnd'>
+  
+    End of List. When this is visible new items will be added. </div>
+    <br/><br/><br/><br/>
+
+
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
@@ -100,4 +142,10 @@
  
 </body>
 
-</html>
+<footer>
+  <div class="container">
+    <img src="images/rowofhouses.jpg" id="footerImage">
+    <p>HomeView.io 2023. All Rights Reserved.</p>
+
+  </div>
+</footer>
