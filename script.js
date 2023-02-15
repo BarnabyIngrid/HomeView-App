@@ -14,8 +14,7 @@ $(document).ready(function () {
     function name(params) {
         
     }
-    //
-    
+  
     //Listen to the search button click and create function to get user input/city
     function getSearchInput(event) {
         event.preventDefault
@@ -46,8 +45,65 @@ $(document).ready(function () {
       documet.getElementById ('crime-data-container').innerHTML = crimeDataHtml;
     })
     
-   
-    const crimeDataJsom = '{"type":"Theft","date":"2022-02-10","location": "London"}';
+   //Implementing infinite scrolling for API Data
+
+   let divContent= document.getElementById('divContent');
+   let listEnd = document.getElementById('listEnd');
+   let itemCount = 0;
+   let appending =false;
+
+    window.addEventListener('DOMContentLoaded',load);
+    function load(){
+            addItem;
+
+    }
+
+    function addItem(){
+      appending = true;
+      for (let i = 0; i < 20; i++) {
+           let item = generateDataBlock(['this is the item #',itemCount].join(''));
+           divContent.appendChild(item);
+           itemCount++;
+      }
+      appending = false;
+        
+        
+      }
+
+// Function for data Block to contian the API result for x
+    function generateDataBlock(message){
+      let item = document.createElement('div');
+      item.setAttribute ('class', 'item');
+      item.textContent = message;
+      return item;
+    }
+     let options ={
+       root:null,
+       rootMargin:'0px',
+       threshold:1.0
+  
+     };
+     
+     // Add Intersection observer to infinite scroll container
+     let callback= (entries, observer) =>{
+         entries.forEach(entry => {
+          if(entry.target.id === 'listEnd'){
+            if(entry.IntersectionObserver && !appending){
+               appending = true;
+               setTimeout(() =>{
+                addItem();
+               },3000);
+               
+              }
+            }
+          });
+         };
+      
+     
+     let observer = new IntersectionObserver(callback,options);
+     observer.observe(listEnd)
+    
+    const crimeDataJson = '{"type":"Theft","date":"2022-02-10","location": "London"}';
     const crimeData = JSON.parse (crimeDataJson);
     console.log(crimeData.type); //Output: "Theft"
     console.log(crimeData.data); //Output: "2022-02-10"
