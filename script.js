@@ -53,4 +53,3 @@ $(document).ready(function () {
     console.log(crimeData.data); //Output: "2022-02-10"
     console.log(crimeData.location); //Output: "London"
     
-
