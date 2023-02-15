@@ -54,7 +54,16 @@
     <div class="container">
       <div class="row">
         <div class="col-md-10 col-lg-8 mx-auto text-center">
-          <img src="images/Bigrowofhousespic.jpg" id="mainPic">
+          <style>
+            body {
+             background-image: url("images/Bigrowofhousespic.jpg");
+             background-position: center;
+             background-size: cover;
+             background-repeat: no-repeat;
+             height: 50%;
+            }
+          </style>
+          
           <h2 class="text-black mb-5">Enter property postcode to begin search</h2>
           <form class="form-inline d-flex">
             <input class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0" id="inputPostcode" type="postcode"
@@ -81,20 +90,26 @@
     <div class="card">
       <div class="card-body">
         <h2 class="card-title">Community Feedback</h2>
-          <p class="card-text">Fade in fade out comments to go here</p>
+        <div id="data">
+            </p>
+          </div>
           </div>
         </div>
       </div>
     </div>
   </div>
-   
-  <footer>
-    <div class="container">
-      <img src="images/rowofhouses.jpg" id="footerImage">
-      <p>Your Website 2023. All Rights Reserved.</p>
 
-    </div>
-  </footer>
+
+  <div id='divContent'>
+
+
+  </div>
+  <div id='listEnd'>
+  
+    End of List. When this is visible new items will be added. </div>
+    <br/><br/><br/><br/>
+
+
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
@@ -106,5 +121,13 @@
   </body>
  
 </body>
+
+<footer>
+  <div class="container">
+    <img src="images/rowofhouses.jpg" id="footerImage">
+    <p>HomeView.io 2023. All Rights Reserved.</p>
+
+  </div>
+</footer>
 
 </html>

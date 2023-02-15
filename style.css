@@ -29,6 +29,37 @@
     height: 500px;
     width: 100%;
   }
+  #divContent{
+    width: 400px; 
+    display: block; 
+    margin: 0 auto; 
+    border: 2px solid black; 
+    text-align: center; 
+}
+#listEnd { width:400px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5px;
+    margin-bottom:5px;
+    border: 1px; 
+    border-color: black;
+    text-align: center;
+     line-height: 50px
+    }
+
+  #data {
+    opacity: 0;
+    transition: opacity 1s;
+  }
+  
+  .fade-in {
+    opacity: 1;
+  }
+  
+  .fade-out {
+    opacity: 0;
+  }
 
 #footerImage {
     background-image: url("images/rowofhouses.jpg");
