@@ -43,6 +43,43 @@
     height: 500px;
     width: 100%;
   }
+  .HVIO-container-form{
+    display:flex ;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    border: 8px solid #E23333;
+    border-radius: 50px;
+  }
+label{
+font-size: 20px;
+margin-bottom: 10px;
+  }
+input[type=text]{
+padding:10px;
+font-size:18px;
+border-radius: 20px;
+border: 10px; 
+color: blueviolet;
+margin: bottom 10px;
+  }
+button{
+padding: 10px 20px;
+font-size: 18px;
+border-radius: 20px;
+border: black;
+background-color: #0077CC;
+color:#fff;
+cursor: pointer;
+    }
+
   #divContent{
     width: 400px; 
     display: block; 
@@ -75,10 +112,11 @@
     opacity: 0;
   }
 
-#footerImage {
+  #footerImage {
     background-image: url("images/rowofhouses.jpg");
     background-repeat: repeat-x;
     height:  50%;
     width: 50%;
+    padding: 1rem,3rem 3rem 3rem;
+    margin-top: 900px
   }
-  
