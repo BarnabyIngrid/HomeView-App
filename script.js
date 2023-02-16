@@ -1,50 +1,84 @@
 //Page is ready to run after html is loaded
-$(document).ready(function () {
+$(document).ready(function (){
     
-    //Display last search history using for loop, if else statements and localStorage
-    var searchedPostCode = []
-    
-    //On click function for stored postcodes
-    $("").on("click",".selected",getSearchInput);
-    $(document).on("click", "selected",storedPostCodes)
-    
-    //Call searchHistory function when the dashboard page loads
-    searchHistory();
-    
-    function name(params) {
-        
-    }
   
-    //Listen to the search button click and create function to get user input/city
-    function getSearchInput(event) {
-        event.preventDefault
-        
+  //Get the form element and add an event listener to the submit button
+  var form = document.getElementById("HVIO-container-form");
+    form.addEventListener("submit", function(Event)
+    
+    // Prevent the form from submitting and refreshing page
+    {Event.preventDefault();
+  }
+  
+  //On click function for stored postcodes
+  $("button").on("click",".selected",getSearchInput));
+  $(document).on("click","selected",storedPostCodes);
+
+    // Define the postcode construct for UK Postcode format
+    var postcodeRegex= "[A-Z]{1,2},d{1,2}[A-Z]{0,1},s*,d[A-Z]{2},i";
+  
+    function isValuePostcode(postcode){
+      //Provides Postcode response
+     return postcodeRegex.test(postcode);
     }
+    console.log(isValuePostcode('SW1A 2AA')); // true
+    console.log(isValuePostcode('AB1 1ZZ')); // true
+    console.log(isValuePostcode('12B XYZ')); // false
+  
+  // Get the postcode value from the input field
+
+     let postcodeRegex = "document.getElementById('postcode')";
+
     
-    //Declare variable for CrimeData
+          //**************Need to revalidate the data Names to add below from HTML*******************////////////////
+
+      
+    //Rapid API BroadBand Data call
+    const options = {
+      method: 'GET',
+      headers: {
+        'X-RapidAPI-Key': '9389e63e86msh0cbe89d62dec2a9p1038dejsn6de54beb1d1b',
+        'X-RapidAPI-Host': 'zoopla.p.rapidapi.com'
+      }
+    };
     
-    //Create a function to display crime data search History stored in local storage
+    fetch('https://zoopla.p.rapidapi.com/properties/get-broadband?listing_id=56354192', options)
+      .then(response => response.json())
+      .then(response => console.log(response))
+       // Process the data and log in console
+       console.log(data);})
+
+      .catch(err => console.error(error));
+
+    //This will create a card for the API requet result
+   function createCard(data){
+    return 
+     <div class="card">
+       <img src="${data.image}" class="card-img-top" alt="${data.title}"></img>
+       <div class="card-body"></div>
+        <h5 class="card-title">${data.title}</h5>
+        <p class="card-text">${data.description}</p>
+     </div>
+   }
    
-    
-    //**************Need to revalidate the data Names to add below from HTML*******************////////////////
-    // Retrieve crime data using an API
-    fetch('addurl')
-     .then (response =>response.json());
-     
-       //Parse data into a Javascript object
-       const crimeData = JSON.parse(String);
-    
+
        //Format the data as HTML
-       let crimeDataHtml = '<ul>';
-       crimeData.forEach(crime => {
-         crimeDataHtml += "<li>${crime.type}: ${crime.date},</li>";
+       let propertDataHtml = '<ul>';
+       propertData.forEach(crime => {
+         propertDataHtml += "<li>${listing.type}: ${listing.date},</li>";
        });
-       crimeDataHtml += '<ul>';
+       propertDataHtml += '<ul>';
     
       // Insert the HTML into your web page
-      documet.getElementById ('crime-data-container').innerHTML = crimeDataHtml;
-    })
+      documet.getElementById ('property-data-container').innerHTML = propertDataHtml;{
+      }
     
+    
+    // New Section to create container for each object to create infinite scroll response
+
+
+
+
    //Implementing infinite scrolling for API Data
 
    let divContent= document.getElementById('divContent');
@@ -137,11 +171,11 @@ var dataElements = document.querySelectorAll("#data p");
     setTimeout(fadeOut, 5000);
     
 
-    const crimeDataJson = '{"type":"Theft","date":"2022-02-10","location": "London"}';
-    const crimeData = JSON.parse (crimeDataJson);
-    console.log(crimeData.type); //Output: "Theft"
-    console.log(crimeData.data); //Output: "2022-02-10"
-    console.log(crimeData.location); //Output: "London"
+    const propertDataJson = '{"type":"Theft","date":"2022-02-10","location": "London"}';
+    const propertData = JSON.parse (propertDataJson);
+    console.log(propertData.type); //Output: "Theft"
+    console.log(propertData.data); //Output: "2022-02-10"
+    console.log(propertData.location); //Output: "London"
 
   
     
