@@ -8,3 +8,6 @@ Main Resources:
 - JavaScript
 - jQuery
 - GitHub
+## DEMO
+ Infite Scroll design
+ 
