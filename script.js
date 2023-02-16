@@ -1,5 +1,5 @@
 //Page is ready to run after html is loaded
-$(document).ready(function (){
+$(document).ready(function(){
     
   
   //Get the form element and add an event listener to the submit button
@@ -11,8 +11,9 @@ $(document).ready(function (){
   }
   
   //On click function for stored postcodes
-  $("button").on("click",".selected",getSearchInput));
-  $(document).on("click","selected",storedPostCodes);
+   ("button").on("click","selected",getSearchInput));{
+     $(document).on("click","selected",storedPostCodes);
+   }
 
     // Define the postcode construct for UK Postcode format
     var postcodeRegex= "[A-Z]{1,2},d{1,2}[A-Z]{0,1},s*,d[A-Z]{2},i";
